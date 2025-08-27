@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keerthi Priya N | Portfolio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        scroll-behavior: smooth;
+    }
+    .navbar {
+        background-color: #1e1e1e;
+        padding: 15px 0;
+    }
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff !important;
+    }
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        font-weight: 500;
+        margin: 0 10px;
+    }
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link:hover {
+        color: #ff6600 !important;
+    }
+    .btn-custom {
+        background: #ff6600;
+        color: #fff;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+    .btn-custom:hover {
+        background: #e65c00;
+    }
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 8%;
+        background-color: #fff;
+    }
+    .hero-text h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .hero-text h1 span {
+        color: #ff6600;
+    }
+    .hero-text h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .hero-text p {
+        max-width: 500px;
+        color: #555;
+        margin-bottom: 25px;
+    }
+    .hero-img img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #fff;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    section {
+        padding: 60px 8%;
+    }
+    h2.section-title {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 40px;
+        color: #333;
+    }
+    #about .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+        justify-content: center;
+    }
+    .about-details ul {
+        list-style: none;
+        padding: 0;
+    }
+    .about-details ul li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+    }
+    .about-details ul li::before {
+        content: "✔";
+        color: #ff6600;
+        position: absolute;
+        left: 0;
+    }
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .skill {
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skill:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .skill:nth-child(1) { background: #E34F26; } /* HTML */
+    .skill:nth-child(2) { background: #1572B6; } /* CSS */
+    .skill:nth-child(3) { background: #F7DF1E; color: #000; } /* JavaScript */
+    .skill:nth-child(4) { background: #61DBFB; color: #000; } /* React */
+    .skill:nth-child(5) { background: #5382A1; } /* Java */
+    .skill:nth-child(6) { background: #A8B9CC; color: #000; } /* C */
+    .skill:nth-child(7) { background: #00599C; } /* C++ */
+    .skill:nth-child(8) { background: #3776AB; } /* Python */
+    .skill:nth-child(9) { background: #F29111; } /* DBMS */
+    .skill:nth-child(10) { background: #9C27B0; } /* UI/UX */
+
+    .project-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+    }
+    .project-card {
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+        transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+        transform: scale(1.05);
+    }
+    .project-card h5 {
+        margin: 15px;
+    }
+    .project-card p {
+        margin: 0 15px 15px;
+        color: #555;
+    }
+    .contact-info p {
+        margin: 5px 0;
+    }
+    .social-icons a {
+        font-size: 28px;
+        margin-right: 15px;
+        color: #333;
+        transition: color 0.3s;
+    }
+    .social-icons a:hover {
+        color: #ff6600;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #1e1e1e;
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">Keerthi</a>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            ☰
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#home">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-custom ms-3">Contact Me</a>
+        </div>
+    </div>
+</nav>
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h3>Hi</h3>
+        <h1>I'm <span>Keerthi Priya</span></h1>
+        <h3>a Web Developer</h3>
+        <p>I am passionate about creating responsive and visually appealing websites. Skilled in frontend and backend technologies, I love building user-friendly interfaces and interactive applications.</p>
+        <div>
+            <a href="#contact" class="btn btn-dark me-2">Hire Me</a>
+            <a href="#projects" class="btn btn-custom">View Projects</a>
+        </div>
+    </div>
+    <div class="hero-img">
+        <img src="keerthi n.jpg" alt="Keerthi Priya">
+    </div>
+</section>
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+        <div class="about-details">
+            <p>
+                I'm <strong>Keerthi Priya N</strong>, a passionate Web Developer skilled in modern technologies to build innovative and user-friendly web applications.
+            </p>
+            <ul>
+                <li>Expert in HTML, CSS, and JavaScript for responsive design.</li>
+                <li>Strong experience with React and UI/UX principles.</li>
+                <li>Knowledgeable in Java, C, C++, Python, and DBMS for full-stack development.</li>
+                <li>Committed to delivering clean, efficient, and optimized solutions.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Java</div>
+        <div class="skill">C</div>
+        <div class="skill">C++</div>
+        <div class="skill">Python</div>
+        <div class="skill">DBMS</div>
+        <div class="skill">UI/UX</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="project-card">
+                <img src="portfolio.png" alt="Portfolio">
+                <h5>Portfolio Website</h5>
+                <p>A responsive personal portfolio showcasing my skills and projects.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="project-card">
+                <img src="banking.webp" alt="Banking">
+                <h5>Online Banking System</h5>
+                <p>A secure web-based banking application for managing accounts and transactions.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="project-card">
+                <img src="lost.jpeg" alt="Lost and Found">
+                <h5>Lost and Found Portal</h5>
+                <p>A platform for reporting and recovering lost items in institutions or communities.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="contact-info">
+                <p><strong>Email:</strong> keerthipriya0802@gmail.com</p>
+                <p><strong>Phone:</strong> 9080787172</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/keerthi-priya-nagarajan-9a297b322/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/Keerthipriya0802" target="_blank"><i class="bi bi-github"></i></a>
+                </div>
+                <a href="KEERTHI PRIYA N(Resume) (1).pdf" class="btn btn-custom mt-3">Download Resume</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <form action="https://formspree.io/f/mayvlknn" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-custom">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 Keerthi Priya N. All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
